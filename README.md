@@ -11,10 +11,10 @@ impurity_coords = "center"
 
 This is makes it easy to automate the generation of symmetry reduced cifs containing impurities which can then be transfered into any electronic structure code using something like cif2cell. This script uses the common libraries numpy and pymatgen.
 
-### RUNNING
+## RUNNING
 
-##### Impurity Element
-The impurity element ('impurity_elm') can be the same as one of the atoms already contained in the cif file. This is useful when you want a symmetry recuded version of the cif, but not something that is just a P1 spacegroup. This could be used when an electronic structure code only allows you to modify particular Wycoff positions, but you only want to change something about a single atom. 
+#### Impurity Element
+The impurity element (`impurity_elm`) can be the same as one of the atoms already contained in the cif file. This is useful when you want a symmetry recuded version of the cif, but not something that is just a P1 spacegroup. This could be used when an electronic structure code only allows you to modify particular Wycoff positions, but you only want to change something about a single atom. 
 
 For example
 
@@ -25,7 +25,7 @@ impurity_elm = "Ni"
 impurity_coords = "center"
 ```
 
-gets from a fully symmetrized cif with only 2 Wyckoff positions
+gets you from a fully symmetrized cif with only 2 Wyckoff positions
 ```
 Ni2+  Ni0  4  0.00000000  0.00000000  0.00000000  1 
 O2-  O1  4  0.00000000  0.00000000  0.50000000  1
@@ -45,5 +45,5 @@ O2-  O8  6  0.00000000  0.00000000  0.25000000  1.0
 O2-  O9  6  0.25000000  0.50000000  0.50000000  1.0
 ```
 
-##### Impurity Coordinates
+#### Impurity Coordinates
 The impurity coordinates (`impurity_coords`) can be either "center", "corner", or a 3 element list of abc fractional lattice coordinates. So "center" and [0.5,0.5,0.5] are equivalent definitions for the impurity coordinates.
