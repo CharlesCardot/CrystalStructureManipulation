@@ -9,7 +9,7 @@ impurity_elm = "Al"
 impurity_coords = "center"
 ```
 
-This is makes it easy to automate the generation of symmetry reduced cifs containing impurities which can then be transfered into any electronic structure code using something like cif2cell. This script uses the common libraries numpy and pymatgen.
+This is makes it easy to automate the generation impurity cifs which can be directly transfered into an electronic structure code using something like cif2cell. This script uses the common libraries numpy and pymatgen.
 
 ## RUNNING
 
