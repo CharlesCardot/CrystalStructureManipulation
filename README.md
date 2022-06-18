@@ -13,6 +13,8 @@ This is makes it easy to automate the generation impurity cifs which can be dire
 
 ## RUNNING
 
+There are 4 inputs: The cif location, supercell size, impurity element, and impurity coordinates. The first two are fairly self explanatory, with the other two being straight forward but with some additional details for ease of use. See the included `NiO_example.ipynb` jupyter notebook for a quick example.
+
 #### Impurity Element
 The impurity element (`impurity_elm`) can be the same as one of the atoms already contained in the cif file. This is useful when you want a symmetry recuded version of the cif, but not something that is just a P1 spacegroup. This could be used when an electronic structure code only allows you to modify particular Wycoff positions, but you only want to change something about a single atom. 
 
