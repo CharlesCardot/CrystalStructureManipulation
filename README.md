@@ -26,8 +26,7 @@ impurity_coords = "center"
 ```
 
 gets from a fully symmetrized cif with only 2 Wyckoff positions
-> Ni2+  Ni0  4  0.00000000  0.00000000  0.00000000  1
-
+> Ni2+  Ni0  4  0.00000000  0.00000000  0.00000000  1 \n
 > O2-  O1  4  0.00000000  0.00000000  0.50000000  1
 
 to a cif with 10 Wyckoff positions
