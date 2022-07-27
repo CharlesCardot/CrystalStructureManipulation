@@ -1,6 +1,6 @@
 # ImpurityCIFbuilder
 
-Often times we want to modify crystal structures with impurities (ex: doping). This script takes a crystalographic information file (cif) as input, uses it to create a new supercell, changes one of the atoms into an impurity, and then finds the new symmetry reduced cif. 
+This script takes a crystalographic information file (cif) as input, uses it to create a new supercell, changes one of the atoms in the new supercell into an impurity, and then finds the new symmetry reduced cif. 
 
 ```
 cif = "NiO_sym.cif"
@@ -9,11 +9,11 @@ impurity_elm = "Al"
 impurity_coords = "center"
 ```
 
-This is makes it easy to automate the generation impurity cifs which can be directly transfered into an electronic structure code using something like cif2cell. This script uses the common libraries numpy and pymatgen.
+This is makes it easy to automate the generation impurity cifs which can be directly transfered into an electronic structure code using something like [cif2cell(https://github.com/torbjornbjorkman/cif2cell). This script uses two common libraries: numpy and pymatgen.
 
 ## RUNNING
 
-There are 4 inputs: The cif location, supercell size, impurity element, and impurity coordinates. The first two are fairly self explanatory, with the other two being straight forward but with some additional details for ease of use. See the included `NiO_example.ipynb` jupyter notebook for a quick example.
+There are 4 parameters: The file name, supercell size, impurity element, and impurity coordinates. The first two are fairly self explanatory, and the last two are straight forward but have some additional details that improve the utility of the script. See the included `NiO_example.ipynb` jupyter notebook for a quick example.
 
 #### Impurity Element
 The impurity element (`impurity_elm`) can be the same as one of the atoms already contained in the cif file. This is useful when you want a symmetry recuded version of the cif, but not something that is just a P1 spacegroup. This could be used when an electronic structure code only allows you to modify particular Wycoff positions, but you only want to change something about a single atom. 
@@ -27,13 +27,13 @@ impurity_elm = "Ni"
 impurity_coords = "center"
 ```
 
-gets you from a fully symmetrized cif with only 2 Wyckoff positions
+gets you from a fully symmetrized cif with only 2 Wyckoff positions (spacegroup 225 Fm-3m)
 ```
 Ni2+  Ni0  4  0.00000000  0.00000000  0.00000000  1 
 O2-  O1  4  0.00000000  0.00000000  0.50000000  1
 ```
 
-to a cif with 10 Wyckoff positions
+to a cif with 10 Wyckoff positions (spacegroup 221 Pm-3m)
 ```
 Ni  Ni_imp  1  0.50000000  0.50000000  0.50000000  1
 Ni2+  Ni0  12  0.00000000  0.25000000  0.25000000  1.0
