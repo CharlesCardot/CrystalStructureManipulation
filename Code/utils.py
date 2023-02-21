@@ -4,7 +4,6 @@ import numpy as np
 elements = ["H","He","Li","Be","B","C","N","O","F","Ne"]
 
 def test():
-    2+2
     pass
 
 def find_unique_species(structure):
