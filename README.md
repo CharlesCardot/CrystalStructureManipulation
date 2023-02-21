@@ -1,5 +1,6 @@
-# ImpurityCIFbuilder
+# CustomCIFbuilder
 
+## Impurity CIF
 This script takes a crystalographic information file (cif) as input, uses it to create a new supercell, changes one of the atoms in the new supercell into an impurity, and then finds the new symmetry reduced cif. 
 
 ```

@@ -19,12 +19,26 @@ def find_unique_species(structure):
 
 def make_impurity_cif(cif, structure, impurity_elm, impurity_coords, pos_tol=0.01):
     
-    """ Builds and writes the impurity cif 
+    """ 
+    Builds and writes the impurity cif 
     
     Parameters
     ----------
 
-        cif:
+        cif : str
+            Name of cif file
+        structure : pymatgen.core Structure class
+            Structure to be edited, usually from a cif
+        impurity_elm : str
+            1 or 2 letter chemcial symbol for intended 
+            impurity element (Ex: "H", "Ni", "Al")
+        impurity_cords : str or [x,y,z]
+            Can be either "center", "corner", or
+            xyz format, denotes which atom to replace with
+            an impurity
+        pos_tot : float
+            Tolerance on the position of the impurity atom,
+            default is 1%
     
     """
     
