@@ -16,7 +16,6 @@ def find_unique_species(structure):
             species_in_struc.append(san_species)
     return species_in_struc
 
-
 def make_impurity_cif(cif, structure, impurity_elm, impurity_coords, pos_tol=0.01):
     
     """ 
