@@ -3,8 +3,6 @@ import numpy as np
 
 elements = ["H","He","Li","Be","B","C","N","O","F","Ne"]
 
-def test():
-    pass
 
 def find_unique_species(structure):
     """ Find unique species in a structure, returns a list of strings """

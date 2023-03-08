@@ -1,6 +1,14 @@
-# CustomCIFbuilder
+# Crystal Structure Manipulation
 
-## Impurity CIF
+This repository is a collection of small snipets of code that help me modify crystal structures, or calculate particular attributes of them. I rely primarily on pymatgen to do most of the heavy lifting, and the scripts are really more of an achive of the various tasks that I've needed to do at one point or another.
+
+Some examples include
+- NiO, Impurity CIF: Shown in more extreme detail below. Used for adding an impurity element/site to a crystal structure.
+- ZnS_strained, Symmetric CIF: Super simple, uses pymatgen's built in CifWriter to create a fully symmetrized CIF of a strained structure.
+- CO2Gas, Molecule CIF: Also super simple and self explanatory. Creates a CIF from a .xyz file that describes a molecule.
+- CuFeS2, Crystal Anisotropy
+
+## Example: Impurity CIF
 This script takes a crystalographic information file (cif) as input, uses it to create a new supercell, changes one of the atoms in the new supercell into an impurity, and then finds the new symmetry reduced cif. 
 
 ```
